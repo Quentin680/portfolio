@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAE 2.01 — Construire un réseau</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <div class="nav-interieur">
+    <a href="../index.html" class="nav-logo">Q. ALTINOK</a>
+    <ul class="nav-liens">
+      <li><a href="../index.html#accueil">Accueil</a></li>
+      <li><a href="../index.html#competences">Compétences</a></li>
+      <li><a href="../index.html#projets">Projets SAE</a></li>
+      <li><a href="../index.html#bilan">Bilan</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="lang">
+      <a href="../projet/sae201.html" class="actif">FR</a>
+      <span class="lang-sep">|</span>
+      <a href="../en/en_sae201.html">EN</a>
+    </div>
+  </div>
+</nav>
+
+<!-- EN-TÊTE DU PROJET -->
+<div class="projet-entete">
+  <div class="projet-entete-interieur">
+
+    <!-- Fil d'Ariane -->
+    <nav class="projet-fil-ariane" aria-label="Fil d'Ariane">
+      <a href="../index.html">Accueil</a>
+      <span class="projet-fil-sep">›</span>
+      <a href="../index.html#projets">Projets SAE</a>
+      <span class="projet-fil-sep">›</span>
+      <span>SAE 2.01</span>
+    </nav>
+
+    <div class="projet-entete-meta">
+      <span class="projet-badge-comp">C1 — Administrer</span>
+      <span class="projet-badge-sem">Semestre 2</span>
+    </div>
+
+    <h1>Construire un réseau</h1>
+    <p class="projet-entete-desc">
+      Sensibilisation aux bonnes pratiques de sécurité informatique, analyse
+      des menaces courantes et mise en place de mesures de protection.
+    </p>
+
+  </div>
+</div>
+
+<!-- CORPS DE LA PAGE -->
+<div class="projet-corps">
+
+  <!-- ══════════════════════════════════════
+       BLOC 1 — FICHE DE SUIVI
+       ══════════════════════════════════════ -->
+  <div class="bloc">
+    <div class="bloc-titre">
+      <div class="bloc-num">1</div>
+      <h2>Fiche de suivi du projet</h2>
+    </div>
+
+    <table class="fiche-tableau">
+      <tr>
+        <td>Nom du projet</td>
+        <td>SAE 2.01 — Construire un réseau</td>
+      </tr>
+      <tr>
+        <td>Compétence visée</td>
+        <td><strong>C1 — Administrer les réseaux et l'Internet</strong> (AC11.05 — Identifier les dysfonctionnements)</td>
+      </tr>
+      <tr>
+        <td>Semestre</td>
+        <td>Semestre 2 · BUT 1</td>
+      </tr>
+      <tr>
+        <td>Durée</td>
+        <td>
+          <span class="a-completer" style="display:inline-flex;">
+          07 Avril 2026 - 19 Mai 2026
+        </span>
+        </td>
+      </tr>
+      <tr>
+        <td>Technologies utilisées</td>
+        <td>
+          GNS3 · VLAN · Routage inter-VLAN · RIP v2 · DHCP · FTP · Apache · rsync · ACL · Port-security
+        </td>
+      </tr>
+      <tr>
+        <td>Compétences développées</td>
+        <td>
+          Ce projet m’a permis de développer des compétences en administration réseau, 
+          notamment la configuration de VLAN, la mise en place du routage inter-VLAN et 
+          l’utilisation d’un protocole de routage dynamique comme RIP v2. J’ai également 
+          travaillé sur le déploiement de services réseau tels que DHCP, FTP et HTTP, ainsi 
+          que sur la sécurisation d’une infrastructure grâce aux ACL et à la sécurité des ports 
+          sur les commutateurs.
+        </td>
+      </tr>
+      <tr>
+        <td>Plan d'action</td>
+        <td>
+          <ol>
+            <li>Analyser le sujet et comprendre la topologie réseau à construire sous GNS3.</li>
+            <li>Découper le réseau 192.168.64.0/20 en sous-réseaux adaptés avec un masque variable.</li>
+            <li>Créer les VLAN 100, 200 et 300 pour séparer les différents groupes d’utilisateurs.</li>
+            <li>Configurer le routage inter-VLAN sur le commutateur central.</li>
+            <li>Mettre en place le routage dynamique RIP v2 entre les routeurs.</li>
+            <li>Déployer les services réseau : DHCP, FTP, serveur Web Apache et synchronisation avec rsync.</li>
+            <li>Ajouter les règles de sécurité : port-security sur les commutateurs et ACL sur les routeurs.</li>
+            <li>Tester la connectivité entre les postes, les serveurs, les VLAN et le réseau extérieur.</li>
+            <li>Corriger les erreurs de configuration et vérifier le bon fonctionnement global du réseau.</li>
+          </ol>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       BLOC 2 — SYNTHÈSE PORTFOLIO
+       ══════════════════════════════════════ -->
+  <div class="bloc">
+    <div class="bloc-titre">
+      <div class="bloc-num">2</div>
+      <h2>Synthèse du projet pour le portfolio</h2>
+    </div>
+
+    <!-- Contexte et objectif -->
+    <div class="synthese-grille">
+      <div class="synthese-bloc">
+        <h4>Contexte &amp; objectif</h4>
+        <p>
+          Cette SAE avait pour objectif de construire un réseau local complet à l’aide du logiciel GNS3.
+          Le projet consistait à mettre en place une infrastructure composée de commutateurs, de routeurs,
+          de plusieurs VLAN et de différents serveurs. Il fallait également configurer des services réseau
+          comme le DHCP, le FTP et un serveur Web, puis ajouter des règles de sécurité simples afin de
+          contrôler les accès et protéger les équipements.
+        </p>
+      </div>
+
+      <div class="synthese-bloc">
+        <h4>Technologies utilisées</h4>
+
+        <div class="tech-grille">
+
+          <div class="tech-carte">
+            <div class="tech-icone">GNS3</div>
+            <span class="tech-nom">GNS3</span>
+          </div>
+
+          <div class="tech-carte">
+            <img class="tech-logo-svg" src="https://cdn.simpleicons.org/cisco/1A56DB" alt="Logo Cisco">
+            <span class="tech-nom">Cisco</span>
+          </div>
+
+          <div class="tech-carte">
+            <div class="tech-icone">VLAN</div>
+            <span class="tech-nom">VLAN</span>
+          </div>
+
+          <div class="tech-carte">
+            <div class="tech-icone">RIP</div>
+            <span class="tech-nom">RIP v2</span>
+          </div>
+
+          <div class="tech-carte">
+            <div class="tech-icone">DHCP</div>
+            <span class="tech-nom">DHCP</span>
+          </div>
+
+          <div class="tech-carte">
+            <div class="tech-icone">FTP</div>
+            <span class="tech-nom">FTP</span>
+          </div>
+
+          <div class="tech-carte">
+            <div class="tech-icone">WEB</div>
+            <span class="tech-nom">Apache</span>
+          </div>
+
+          <div class="tech-carte">
+            <div class="tech-icone">ACL</div>
+            <span class="tech-nom">ACL</span>
+          </div>
+
+          <div class="tech-carte">
+            <div class="tech-icone">SEC</div>
+            <span class="tech-nom">Port-security</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="synthese-bloc">
+        <h4>Compétences mobilisées</h4>
+        <ul>
+          <li>
+            <strong>AC11.02</strong> — Comprendre l’architecture des systèmes numériques,
+            des communications et de l’Internet.
+          </li>
+          <li>
+            <strong>AC11.03</strong> — Configurer les fonctions de base du réseau local :
+            VLAN, routage inter-VLAN, adressage IP et services réseau.
+          </li>
+          <li>
+            <strong>AC11.04</strong> — Maîtriser les rôles des systèmes d’exploitation afin
+            d’installer et configurer des services comme Apache, FTP et DHCP.
+          </li>
+          <li>
+            <strong>AC11.05</strong> — Identifier les dysfonctionnements du réseau local et
+            corriger les erreurs de connectivité ou de configuration.
+          </li>
+          <li>
+            <strong>AC11.06</strong> — Installer un poste client et expliquer la procédure mise en place.
+          </li>
+        </ul>
+      </div>
+
+      <div class="synthese-bloc">
+        <h4>Déroulement &amp; méthodologie</h4>
+        <p>
+          J’ai commencé par analyser la topologie demandée et par préparer le plan d’adressage IP
+          avec un découpage en sous-réseaux. Ensuite, j’ai créé les VLAN 100, 200 et 300 afin de
+          séparer les groupes d’utilisateurs : administration, développeurs et administrateurs.
+          J’ai configuré le routage inter-VLAN, le protocole RIP v2 entre les routeurs, puis les
+          services DHCP, FTP et Apache. Enfin, j’ai ajouté les règles de sécurité avec les ACL et
+          le port-security avant de tester la connectivité entre les postes, les serveurs et le réseau extérieur.
+        </p>
+      </div>
+    </div>
+
+    <!-- Galerie d'illustrations -->
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--texte);margin:1.5rem 0 1rem;">
+      Illustrations
+    </h3>
+
+    <div class="galerie">
+      <div class="galerie-item">
+        <div class="galerie-img">
+          <img src="../images/sae201_architecture.png" alt="Topologie du réseau SAE 2.01">
+        </div>
+        <p class="galerie-legende">
+          Cette illustration présente la topologie générale du réseau à construire. On y retrouve les routeurs,
+          les commutateurs, les différents serveurs et les trois VLAN principaux : VLAN 100 pour l’administration,
+          VLAN 200 pour les développeurs et VLAN 300 pour les administrateurs.
+        </p>
+      </div>
+
+      <div class="galerie-item">
+        <div class="galerie-img">
+          <img src="../images/sae201-vlan.png" alt="Configuration des VLAN et du routage inter-VLAN">
+        </div>
+        <p class="galerie-legende">
+          Cette capture peut présenter la configuration des VLAN et du routage inter-VLAN sur le commutateur
+          central. Cette étape permet aux différents réseaux logiques de communiquer tout en conservant une
+          séparation claire entre les groupes d’utilisateurs.
+        </p>
+      </div>
+
+      <div class="galerie-item">
+        <div class="galerie-img">
+          <img src="../images/sae201-tests.png" alt="Tests de connectivité et services réseau">
+        </div>
+        <p class="galerie-legende">
+          Cette capture peut montrer les tests réalisés après configuration : vérification du DHCP, accès au
+          serveur Web Apache, test FTP, communication entre VLAN et contrôle des accès grâce aux ACL.
+          Ces tests permettent de valider le bon fonctionnement global du réseau.
+        </p>
+      </div>
+    </div>
+
+    <!-- Retour d'expérience -->
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--texte);margin:1.5rem 0 1rem;">
+      Retour d'expérience
+    </h3>
+
+    <div class="synthese-grille">
+      <div class="synthese-bloc">
+        <h4>Ce que j'ai appris</h4>
+        <p>
+          Cette SAE m’a permis de mieux comprendre la construction complète d’un réseau local.
+          J’ai appris à organiser un réseau avec plusieurs VLAN, à mettre en place un routage inter-VLAN
+          et à utiliser un protocole de routage dynamique comme RIP v2. J’ai aussi renforcé mes compétences
+          sur les services réseau, notamment DHCP, FTP, Apache et rsync. Enfin, la mise en place des ACL
+          et du port-security m’a permis de mieux comprendre les premières mesures de sécurité réseau.
+        </p>
+      </div>
+
+      <div class="synthese-bloc">
+        <h4>Ce que je ferais différemment</h4>
+        <p>
+          Avec du recul, je préparerais un plan d’adressage plus détaillé avant de commencer les configurations.
+          Cela permettrait d’éviter les erreurs de sous-réseaux ou de passerelles. Je testerais aussi chaque étape
+          plus progressivement : d’abord les VLAN, ensuite le routage, puis les services et enfin la sécurité.
+          Cette méthode rendrait le dépannage plus simple en cas de problème de connectivité.
+        </p>
+      </div>
+    </div>
+  </div>
+    <!-- Liens / ressources -->
+    <div class="synthese-bloc" style="margin-top:1rem;">
+      <h4>Liens &amp; ressources</h4>
+      <p>
+        <!-- ✏️ Remplace par tes vrais liens -->
+        <a href="#">Rapport PDF →</a> &nbsp;·&nbsp;
+        <a href="#">Dépôt GitHub →</a> &nbsp;·&nbsp;
+        <a href="#">Documentation →</a>
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Navigation entre projets -->
+  <div class="nav-projets">
+    <a href="../index.html#projets" class="btn btn--secondaire">← Tous les projets</a>
+    <a href="sae102.html" class="btn btn--primaire">SAE 1.02 →</a>
+  </div>
+
+</div><!-- fin .projet-corps -->
+
+<footer class="footer">
+  <p><strong>Quentin ALTINOK</strong> · BUT Réseaux &amp; Télécommunications · IUT de Colmar · &copy; 2025–2026</p>
+</footer>
+
+<a href="#" class="retour-haut" aria-label="Retour en haut">↑</a>
+
+</body>
+</html>

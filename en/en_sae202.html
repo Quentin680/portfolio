@@ -1,0 +1,285 @@
+html
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SAE 2.02 — Portable Web Radio ESP32 &amp; VS1053</title>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- NAVIGATION -->
+<nav class="nav">
+<div class="nav-interieur">
+<a class="nav-logo" href="../index.html">Q. ALTINOK</a>
+<ul class="nav-liens">
+<li><a href="../en.html#accueil">Home</a></li>
+<li><a href="../en.html#competences">Skills</a></li>
+<li><a href="../en.html#projets">SAE Projects</a></li>
+<li><a href="../en.html#bilan">Review</a></li>
+<li><a href="../en.html#contact">Contact</a></li>
+</ul>
+<div class="lang">
+<a href="../projet/sae202.html">FR</a>
+<span class="lang-sep">|</span>
+<a aria-current="true" class="actif" href="en_sae202.html">EN</a>
+</div>
+</div>
+</nav>
+<!-- PROJECT HEADER -->
+<div class="projet-entete">
+<div class="projet-entete-interieur">
+<!-- Fil d'Ariane -->
+<nav aria-label="Breadcrumb" class="projet-fil-ariane">
+<a href="../index.html">Home</a>
+<span class="projet-fil-sep">›</span>
+<a href="../index.html#projets">SAE Projects</a>
+<span class="projet-fil-sep">›</span>
+<span>SAE 2.02</span>
+</nav>
+<div class="projet-entete-meta">
+<span class="projet-badge-comp">C2 — Connect</span>
+<span class="projet-badge-sem">Semester 2</span>
+</div>
+<h1>Portable Web Radio Project</h1>
+<p class="projet-entete-desc">
+      Design and programming of a portable Web Radio based on an ESP32 and a VS1053 audio codec, allowing Internet stations in MP3 or AAC to be played and controlled remotely from a phone.
+    </p>
+</div>
+</div>
+<!-- PAGE BODY -->
+<div class="projet-corps">
+<!-- ══════════════════════════════════════
+       BLOC 1 — TRACKING SHEET
+       ══════════════════════════════════════ -->
+<div class="bloc">
+<div class="bloc-titre">
+<div class="bloc-num">1</div>
+<h2>Project tracking sheet</h2>
+</div>
+<table class="fiche-tableau">
+<tr>
+<td>Project name</td>
+<td>SAE 2.02 — Portable Web Radio Project with ESP32 and VS1053</td>
+</tr>
+<tr>
+<td>Project objectives</td>
+<td>
+        Create a portable Web Radio allowing Internet radio stations to be listened to in stereo, through headphones or speakers. The system had to read MP3 or AAC audio streams and allow the station choice, volume, tone and sound spatialisation effect to be controlled from a phone.
+      </td>
+</tr>
+<tr>
+<td>Main targeted competency</td>
+<td>
+<strong>C1 — Administer networks and the Internet</strong><br/>
+        This competency is used through Wi-Fi configuration, the use of the MQTT protocol, understanding the network architecture of the connected object and resolving malfunctions encountered during testing.
+      </td>
+</tr>
+<tr>
+<td>Other competencies used</td>
+<td>
+<strong>C3 — Create IT tools and applications for Networks &amp; Telecommunications</strong><br/>
+        This competency is used through modifying the Arduino program, using software libraries, setting up a control interface and adapting the code to the project’s needs.
+      </td>
+</tr>
+<tr>
+<td>Semester</td>
+<td>Semester 2 · BUT 1 Networks &amp; Telecommunications</td>
+</tr>
+<tr>
+<td>Duration and deadlines</td>
+<td>
+        22 hours in total: 10 supervised hours and 12 hours of independent work. The work progressed step by step, with several validations: SPI communication, Web Radio playback, adding audio settings, Wi-Fi management, then remote control with MQTT.
+      </td>
+</tr>
+<tr>
+<td>Technologies used</td>
+<td>
+        Adafruit HUZZAH32 ESP32 Feather board · Adafruit board ·
+        VS1053 audio codec · Arduino IDE · WiFi · WiFiManager · MQTT · PubSubClient ·
+        ESP32_VS1053_Stream · SPI bus · MQTT control app on phone
+      </td>
+</tr>
+<tr>
+<td>Skills developed<br/><small>link with the framework</small></td>
+<td>
+<ul>
+<li>
+<strong>AC11.02</strong> — Understand the architecture and foundations of digital systems, communications and the Internet: use of an ESP32 connected via Wi-Fi and an Internet audio stream.
+          </li>
+<li>
+<strong>AC11.05</strong> — Identify local network malfunctions and know how to report them: analysis of Wi-Fi connection, MQTT broker or board communication issues.
+          </li>
+<li>
+<strong>AC13.01</strong> — Use a computer system and its tools: use of the Arduino IDE, serial monitor, libraries and testing tools.
+          </li>
+<li>
+<strong>AC13.02</strong> — Read, execute, correct and modify a program: adaptation of the provided program to manage stations, volume, tone, spatialisation and MQTT.
+          </li>
+<li>
+<strong>AC13.04</strong> — Know the architecture and technologies of a website: creation and integration of an HTML/CSS portfolio page presenting the project.
+          </li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Action plan<br/><small>key steps</small></td>
+<td>
+<ol>
+<li>Study the SAE topic and identify the expected features.</li>
+<li>Discover the hardware used: ESP32, Music Maker FeatherWing board and VS1053 codec.</li>
+<li>Find the pins required for SPI communication between the ESP32 and the VS1053.</li>
+<li>Configure the Arduino environment and install the required libraries.</li>
+<li>Test a first program capable of playing a Web Radio.</li>
+<li>Add audio settings: volume, bass, treble and spatialisation.</li>
+<li>Improve Wi-Fi management with WiFiManager.</li>
+<li>Add radio station URL management.</li>
+<li>Set up the MQTT protocol to control the radio from a phone.</li>
+<li>Test, correct errors and validate the final operation of the project.</li>
+</ol>
+</td>
+</tr>
+</table>
+</div>
+<!-- ══════════════════════════════════════
+       BLOC 2 — PORTFOLIO SUMMARY
+       ══════════════════════════════════════ -->
+<div class="bloc">
+<div class="bloc-titre">
+<div class="bloc-num">2</div>
+<h2>Project summary for the portfolio</h2>
+</div>
+<!-- Contexte et objectif -->
+<div class="synthese-grille">
+<div class="synthese-bloc">
+<h4>Context &amp; objective</h4>
+<p>
+        The objective of this SAE was to build a portable Web Radio using an ESP32 and a VS1053 audio codec. The system had to play Internet radio stations in MP3 or AAC through headphones or speakers. The project also had to include several controls: station switching, volume adjustment, tone adjustment and sound spatialisation activation. The final objective was to control the radio from a phone using the MQTT protocol.
+      </p>
+</div>
+<div class="synthese-bloc">
+<h4>Technologies used</h4>
+<div class="tech-grille">
+<div class="tech-carte">
+<img alt="Arduino logo" class="tech-logo-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg"/>
+<span class="tech-nom">Arduino IDE</span>
+</div>
+<div class="tech-carte">
+<div class="tech-icone">ESP32</div>
+<span class="tech-nom">ESP32</span>
+</div>
+<div class="tech-carte">
+<div class="tech-icone">VS</div>
+<span class="tech-nom">VS1053</span>
+</div>
+<div class="tech-carte">
+<div class="tech-icone">SPI</div>
+<span class="tech-nom">Bus SPI</span>
+</div>
+<div class="tech-carte">
+<div class="tech-icone">WiFi</div>
+<span class="tech-nom">WiFiManager</span>
+</div>
+<div class="tech-carte">
+<div class="tech-icone">MQTT</div>
+<span class="tech-nom">MQTT</span>
+</div>
+<div class="tech-carte">
+<div class="tech-icone">URL</div>
+<span class="tech-nom">Radio streams</span>
+</div>
+<div class="tech-carte">
+<div class="tech-icone">Audio</div>
+<span class="tech-nom">MP3 / AAC</span>
+</div>
+</div>
+</div>
+<div class="synthese-bloc">
+<h4>Competencies used</h4>
+<ul>
+<li>
+<strong>AC11.02</strong> — Understand the architecture and foundations of digital systems, communications and the Internet: use of an ESP32 connected via Wi-Fi and playback of an Internet audio stream.
+        </li>
+<li>
+<strong>AC11.05</strong> — Identify local network malfunctions and know how to report them: analysis of problems related to Wi-Fi, the MQTT broker, station URLs or communication between the ESP32 and the audio codec.
+        </li>
+<li>
+<strong>AC13.01</strong> — Use a computer system and its tools: use of the Arduino IDE, serial monitor, libraries and testing tools.
+        </li>
+<li>
+<strong>AC13.02</strong> — Read, execute, correct and modify a program: adaptation of the program to manage stations, volume, tone, spatialisation and MQTT control.
+        </li>
+<li>
+<strong>AC13.04</strong> — Know the architecture and technologies of a website: creation and integration of an HTML/CSS portfolio page presenting the project.
+        </li>
+</ul>
+</div>
+<div class="synthese-bloc">
+<h4>Process &amp; methodology</h4>
+<p>
+        I began by studying the topic in order to identify the expected features. Then, I discovered the hardware used: the ESP32 board, the Music Maker FeatherWing board and the VS1053 codec. I researched the pins required for SPI communication, then configured the Arduino environment with the necessary libraries. After testing a first Web Radio, I gradually added audio settings such as volume, bass, treble and spatialisation. Finally, I improved Wi-Fi management with WiFiManager, added radio station URL management and set up MQTT to control the radio from a phone.
+      </p>
+</div>
+</div>
+<!-- Galerie d'illustrations -->
+<h3 style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--texte);margin:1.5rem 0 1rem;">
+    Illustrations
+  </h3>
+<div class="galerie">
+<div class="galerie-item">
+<div class="galerie-img">
+<img alt="ESP32 and VS1053 setup for the Web Radio" src="../images/sae202-montage.png"/>
+</div>
+<p class="galerie-legende">
+        This photo presents the hardware setup of the Web Radio. It shows the ESP32 board connected to the VS1053 audio board, with the necessary wiring for power and audio output. This step helped me understand the role of the microcontroller, the audio codec and the link between the two boards.
+      </p>
+</div>
+<div class="galerie-item">
+<div class="galerie-img">
+<img alt="Arduino code for spatialisation management" src="../images/sae202-code-spatialisation.png"/>
+</div>
+<p class="galerie-legende">
+        This screenshot shows part of the Arduino program, especially the spatialisation management function. The code modifies the VS1053 SCI_MODE register to activate different levels of spatial effect. This part illustrates the work of modifying and adapting the provided program.
+      </p>
+</div>
+</div>
+<!-- Feedback -->
+<h3 style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--texte);margin:1.5rem 0 1rem;">
+    Feedback
+  </h3>
+<div class="synthese-grille">
+<div class="synthese-bloc">
+<h4>What I learned</h4>
+<p>
+        This SAE allowed me to better understand how a connected embedded system works. I learned to use an ESP32 with Wi-Fi, communicate with a VS1053 audio codec via SPI and manage an audio stream coming from the Internet. I also improved in Arduino programming, especially by modifying an existing program to add audio control functions. Finally, using MQTT helped me understand how to control a connected object from a phone.
+      </p>
+</div>
+<div class="synthese-bloc">
+<h4>What I would do differently</h4>
+<p>
+        With hindsight, I would organise the code more from the beginning of the project by clearly separating the parts related to Wi-Fi, MQTT, radio stations and audio processing. I would also document the MQTT topics used more clearly to make testing between the ESP32 and the mobile interface easier. Finally, I would carry out more regular tests after each feature addition to identify errors more quickly.
+      </p>
+</div>
+</div>
+</div>
+<!-- Links / resources -->
+<div class="synthese-bloc" style="margin-top:1rem;">
+<h4>Links &amp; resources</h4>
+<p>
+<!-- ✏️ Replace with your real links -->
+<a href="#">PDF report →</a>  · 
+        <a href="#">Documentation →</a>
+</p>
+</div>
+</div>
+<!-- Project navigation -->
+<div class="nav-projets">
+<a class="btn btn--secondaire" href="../index.html#projets">← All projects</a>
+<a class="btn btn--primaire" href="../projet/sae203.html">SAE 2.03 →</a>
+</div>
+<!-- end .projet-corps -->
+<footer class="footer">
+<p><strong>Quentin ALTINOK</strong> · BUT Networks &amp; Telecommunications · IUT Colmar · © 2025–2026</p>
+</footer>
+<a aria-label="Back to top" class="retour-haut" href="#">↑</a>
+</body>
+</html>

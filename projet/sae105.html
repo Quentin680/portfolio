@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAE 1.05 — Analyse des gros fichiers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <div class="nav-interieur">
+    <a href="../index.html" class="nav-logo">Q. ALTINOK</a>
+    <ul class="nav-liens">
+      <li><a href="../index.html#accueil">Accueil</a></li>
+      <li><a href="../index.html#competences">Compétences</a></li>
+      <li><a href="../index.html#projets">Projets SAE</a></li>
+      <li><a href="../index.html#bilan">Bilan</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="lang">
+      <a href="../projet/sae105.html" class="actif">FR</a>
+      <span class="lang-sep">|</span>
+      <a href="../en/en_sae105.html">EN</a>
+    </div>
+  </div>
+</nav>
+
+<!-- EN-TÊTE DU PROJET -->
+<div class="projet-entete">
+  <div class="projet-entete-interieur">
+
+    <!-- Fil d'Ariane -->
+    <nav class="projet-fil-ariane" aria-label="Fil d'Ariane">
+      <a href="../index.html">Accueil</a>
+      <span class="projet-fil-sep">›</span>
+      <a href="../index.html#projets">Projets SAE</a>
+      <span class="projet-fil-sep">›</span>
+      <span>SAE 1.05</span>
+    </nav>
+
+    <div class="projet-entete-meta">
+      <span class="projet-badge-comp">C3 — Programmer</span>
+      <span class="projet-badge-sem">Semestre 1</span>
+    </div>
+
+    <h1>Analyse des gros fichiers</h1>
+    <p class="projet-entete-desc">
+      Sensibilisation aux bonnes pratiques de sécurité informatique, analyse
+      des menaces courantes et mise en place de mesures de protection.
+    </p>
+
+  </div>
+</div>
+
+<!-- CORPS DE LA PAGE -->
+<div class="projet-corps">
+
+  <!-- ══════════════════════════════════════
+       BLOC 1 — FICHE DE SUIVI
+       ══════════════════════════════════════ -->
+  <div class="bloc">
+    <div class="bloc-titre">
+      <div class="bloc-num">1</div>
+      <h2>Fiche de suivi du projet</h2>
+    </div>
+
+    <table class="fiche-tableau">
+      <tr>
+        <td>Nom du projet</td>
+        <td>SAE 1.05 — Analyse des gros fichiers</td>
+      </tr>
+      <tr>
+        <td>Compétence visée</td>
+        <td><strong></strong>Administrer les réseaux et l'Internet</td>
+      </tr>
+      <tr>
+        <td>Semestre</td>
+        <td>Semestre 1 · BUT 1</td>
+      </tr>
+      <tr>
+        <td>Durée</td>
+        <td>
+          <span class="a-completer" style="display:inline-flex;"><span class="a-completer-icone"></span> 05 Janv 2026 - 29 Janv 2026 </span>
+        </td>
+      </tr>
+      <tr>
+        <td>Technologies utilisées</td>
+        <td>
+          Python 3 · Pathlib · JSON · PyQt5 / PyQtChart · PowerShell Core ·
+          Développement multiplateforme
+        </td>
+      </tr>
+      <tr>
+        <td>Compétences développées</td>
+        <td>
+  
+        </td>
+      </tr>
+      <tr>
+        <td>Plan d'action</td>
+        <td>
+          <span class="a-completer" style="display:inline-flex;"><span class="a-completer-icone"></span> 
+        <ol>
+          <li>Étudier le problème du manque d'espace disque et le besoin d'identifier les gros fichiers</li>
+          <li>Développer un premier script Python permettant de sélectionner un répertoire avec PyQt5</li>
+          <li>Créer un second script Python pour parcourir récursivement les dossiers et récupérer la taille des fichiers</li>
+          <li>Trier les fichiers du plus volumineux au plus petit et conserver les 100 plus gros</li>
+          <li>Sauvegarder les résultats dans un fichier JSON</li>
+          <li>Réaliser une interface graphique avec un diagramme circulaire (« camembert »), des légendes et plusieurs onglets.</li>
+          <li>Générer automatiquement un script PowerShell permettant la suppression sécurisée des fichiers sélectionnés</li>
+          <li>Tester et valider le fonctionnement complet de l'application</li>
+        </ol>
+        </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       BLOC 2 — SYNTHÈSE PORTFOLIO
+       ══════════════════════════════════════ -->
+  <div class="bloc">
+    <div class="bloc-titre">
+      <div class="bloc-num">2</div>
+      <h2>Synthèse du projet pour le portfolio</h2>
+    </div>
+
+    <!-- Contexte et objectif -->
+    <div class="synthese-grille">
+      <div class="synthese-bloc">
+        <h4>Contexte &amp; objectif</h4>
+        <div class="a-completer"><span class="a-completer-icone"></span>
+          <p>Ce projet avait pour objectif de développer un outil de reporting capable d'analyser une arborescence de fichiers afin d'identifier les fichiers les plus volumineux d'un disque. Cette problématique est fréquemment rencontrée lors de la maintenance des postes informatiques, lorsque l'espace de stockage devient insuffisant. L'application devait permettre de localiser les 100 plus gros fichiers, de les représenter graphiquement et de faciliter leur suppression de manière sécurisée.</p></div>
+      </div>
+      <!--Technologie Utilisées-->
+      <div class="synthese-bloc">
+        <h4>Technologies utilisées</h4>
+
+        <div class="tech-grille">
+
+          <div class="tech-carte">
+            <img class="tech-logo-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Logo Python">
+            <span class="tech-nom">Python 3</span>
+          </div>
+
+          <div class="tech-carte">
+            <div class="tech-icone">Path</div>
+            <span class="tech-nom">Pathlib</span>
+          </div>
+
+          <div class="tech-carte">
+            <div class="tech-icone">{ }</div>
+            <span class="tech-nom">JSON</span>
+          </div>
+
+          <div class="tech-carte">
+            <img class="tech-logo-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/qt/qt-original.svg" alt="Logo Qt">
+            <span class="tech-nom">PyQt5</span>
+          </div>
+
+          <div class="tech-carte">
+            <div class="tech-icone">Chart</div>
+            <span class="tech-nom">PyQtChart</span>
+          </div>
+
+          <div class="tech-carte">
+            <img class="tech-logo-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/powershell/powershell-plain.svg" alt="Logo PowerShell">
+            <span class="tech-nom">PowerShell Core</span>
+          </div>
+
+          <div class="tech-carte">
+            <div class="tech-icone">OS</div>
+            <span class="tech-nom">Multiplateforme</span>
+          </div>
+
+        </div>
+      </div>
+      <div class="synthese-bloc">
+        <h4>Compétences mobilisées</h4>
+        <ul>
+          <li><strong>AC12.01</strong> — Utiliser les systèmes informatiques et leurs outils</li>
+          <li><strong>AC12.02</strong> — Lire, exécuter, corriger et modifier des scripts</li>
+          <li><strong>AC12.03</strong> — Traiter, stocker et exploiter des données</li>
+          <li>Concevoir un outil de reporting</li>
+          <li>Manipuler des fichiers JSON</li>
+          <li>Réaliser une interface graphique avec PyQt</li>
+          <li>Automatiser des tâches grâce à PowerShell</li>
+        </ul>
+      </div>
+      <div class="synthese-bloc">
+        <h4>Déroulement &amp; méthodologie</h4>
+        <div class="a-completer"><span class="a-completer-icone"></span>
+          <p>Le projet a été découpé en plusieurs scripts Python. Un premier programme permettait à l'utilisateur de choisir le répertoire à analyser grâce à PyQt5. Un deuxième script parcourait récursivement tous les sous-répertoires afin de récupérer les chemins complets et les tailles des fichiers. Les résultats étaient ensuite triés et stockés dans un fichier JSON. Enfin, un troisième script réalisait une interface graphique composée d'onglets, d'un diagramme circulaire et de listes de légendes permettant de sélectionner certains fichiers. Un script PowerShell pouvait alors être généré afin de supprimer les fichiers choisis.</p></div>
+      </div>
+    </div>
+
+    <!-- Galerie d'illustrations -->
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--texte);margin:1.5rem 0 1rem;">Illustrations</h3> 
+    <div class="galerie">
+      <div class="galerie-item">
+        <div class="galerie-img">
+          <img src="../images/sae105-interface.png" alt="Interface principale de l'application SAE 105">
+        </div>
+        <p class="galerie-legende">
+          Cette capture montre l’interface principale de l’application développée dans le cadre de la SAE 105.
+          On y voit la répartition des tailles des fichiers sous forme de graphique circulaire ainsi que le contenu
+          détaillé du répertoire analysé. Cette interface permet de repérer rapidement les fichiers les plus volumineux
+          afin de faciliter le nettoyage du dossier.
+        </p>
+      </div>
+
+      <div class="galerie-item">
+        <div class="galerie-img">
+          <img src="../images/sae105-pipeline.png" alt="Schéma du pipeline de traitement des fichiers">
+        </div>
+        <p class="galerie-legende">
+          Cette illustration présente le pipeline de traitement de l’application. Le processus commence par
+          un script PowerShell, passe ensuite par le traitement en Python, l’exploitation des données en JSON,
+          puis leur affichage dans une interface PyQt avant la suppression éventuelle des fichiers sélectionnés.
+          Ce schéma permet de mieux comprendre l’organisation générale du projet.
+        </p>
+      </div>
+
+    <!-- Retour d'expérience -->
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--texte);margin:1.5rem 0 1rem;">Retour d'expérience</h3>
+    <div class="synthese-grille">
+      <div class="synthese-bloc">
+        <h4>Ce que j'ai appris</h4>
+        <div class="a-completer"><span class="a-completer-icone"></span>
+          <p>Ce pojet m'a permis d'apprendre à traiter de grandes quantités de données, à manipuler des fichiers JSON, à parcourir récursivement une arborescence de dossiers, à concevoir une interface graphique en Python et à automatiser certaines tâches d'administration grâce à PowerShell. J'ai également découvert la conception d'un outil de reporting et l'organisation d'un projet composé de plusieurs scripts complémentaires.</p></div>
+      </div>
+      <div class="synthese-bloc">
+        <h4>Ce que je ferais différemment</h4>
+        <div class="a-completer"><span class="a-completer-icone"></span><p>Avec le recul, j'aurais pu consacrer davantage de temps à la phase de conception afin de mieux structurer les différents scripts et anticiper certaines difficultés liées à la manipulation des fichiers et à l'interface graphique. J'aurais également pu améliorer la lisibilité du code en le documentant davantage et en ajoutant plus de vérifications pour rendre l'application plus robuste face aux erreurs. Enfin, j'aurais pu optimiser certaines parties du programme afin d'améliorer les performances lors de l'analyse de très grandes arborescences de fichiers.</p></div>
+      </div>
+    </div>
+
+    <!-- Liens / ressources -->
+    <div class="synthese-bloc" style="margin-top:1rem;">
+      <h4>Liens &amp; ressources</h4>
+      <p>
+        <!-- ✏️ Remplace par tes vrais liens -->
+        <a href="#">Rapport PDF →</a> &nbsp;·&nbsp;
+        <a href="#">Documentation →</a>
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Navigation entre projets -->
+  <div class="nav-projets">
+    <a href="../index.html#projets" class="btn btn--secondaire">← Tous les projets</a>
+    <a href="../projet/sae201.html" class="btn btn--primaire">SAE 2.01 →</a>
+  </div>
+
+</div><!-- fin .projet-corps -->
+
+<footer class="footer">
+  <p><strong>Quentin ALTINOK</strong> · BUT Réseaux &amp; Télécommunications · IUT de Colmar · &copy; 2025–2026</p>
+</footer>
+
+<a href="#" class="retour-haut" aria-label="Retour en haut">↑</a>
+
+</body>
+</html>

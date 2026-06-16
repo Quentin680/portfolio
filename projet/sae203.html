@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAE 2.03 — Web Radio ESP32 &amp; VS1053</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <div class="nav-interieur">
+    <a href="../index.html" class="nav-logo">Q. ALTINOK</a>
+    <ul class="nav-liens">
+      <li><a href="../index.html#accueil">Accueil</a></li>
+      <li><a href="../index.html#competences">Compétences</a></li>
+      <li><a href="../index.html#projets">Projets SAE</a></li>
+      <li><a href="../index.html#bilan">Bilan</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="lang">
+      <a href="../projet/sae203.html" class="actif">FR</a>
+      <span class="lang-sep">|</span>
+      <a href="../en/en_sae203.html">EN</a>
+    </div>
+  </div>
+</nav>
+
+<!-- EN-TÊTE DU PROJET -->
+<div class="projet-entete">
+  <div class="projet-entete-interieur">
+
+    <!-- Fil d'Ariane -->
+    <nav class="projet-fil-ariane" aria-label="Fil d'Ariane">
+      <a href="../index.html">Accueil</a>
+      <span class="projet-fil-sep">›</span>
+      <a href="../index.html#projets">Projets SAE</a>
+      <span class="projet-fil-sep">›</span>
+      <span>SAE 2.03</span>
+    </nav>
+
+    <div class="projet-entete-meta">
+     <span class="projet-badge-comp">C3 — Programmer</span>
+     <span class="projet-badge-sem">Semestre 2 · Groupe de 3</span>
+    </div>
+
+   <h1>Gestionnaire de notes</h1>
+   <p class="projet-entete-desc">
+      Développement en groupe de 3 d’une application web de gestion de notes, permettant
+      de consulter, ajouter, modifier et supprimer des étudiants, des UE, des ressources,
+      des enseignants, des examens et des notes. Le projet repose sur une base de données
+      et une application déployée sur une machine virtuelle Linux.
+   </p>
+  </div>
+</div>
+
+<!-- CORPS DE LA PAGE -->
+<div class="projet-corps">
+
+  <!-- ══════════════════════════════════════
+       BLOC 1 — FICHE DE SUIVI
+       ══════════════════════════════════════ -->
+  <div class="bloc">
+    <div class="bloc-titre">
+      <div class="bloc-num">1</div>
+      <h2>Fiche de suivi du projet</h2>
+    </div>
+
+  <table class="fiche-tableau">
+    <tr>
+      <td>Nom du projet</td>
+      <td>SAE 2.03 — Gestionnaire de notes</td>
+    </tr>
+
+    <tr>
+      <td>Objectifs du projet</td>
+      <td>
+        L’objectif de cette SAE était de concevoir et déployer une application web permettant
+        d’alimenter, de consulter et de manipuler un ensemble de données. Notre groupe a travaillé
+        sur le sujet « Gestionnaire de notes », dont le but était de créer une interface de gestion
+        des étudiants, des UE, des ressources, des enseignants, des examens et des notes.
+        Le site devait permettre de réaliser un CRUD complet, de saisir des notes manuellement
+        ou par import de fichier, puis de générer un relevé de notes simple pour un étudiant.
+      </td>
+    </tr>
+
+    <tr>
+      <td>Modalité de travail</td>
+      <td>
+        Ce projet a été réalisé en groupe de 3 étudiants :
+        Le travail collaboratif a été organisé autour d’un dépôt GitHub, d’un diagramme de Gantt
+        et d’une répartition des tâches entre les membres du groupe.
+      </td>
+    </tr>
+
+    <tr>
+      <td>Compétence principale visée</td>
+      <td>
+        <strong>C3 — Créer des outils et applications informatiques pour les R&amp;T</strong><br>
+        Cette compétence est mobilisée à travers la conception d’une application web, la gestion
+        d’une base de données, la mise en place d’un environnement de développement Linux
+        et le déploiement d’un service web fonctionnel.
+      </td>
+    </tr>
+
+    <tr>
+      <td>Semestre</td>
+      <td>Semestre 2 · BUT 1 Réseaux &amp; Télécommunications</td>
+    </tr>
+
+    <tr>
+      <td>Durée et échéances</td>
+      <td>
+        27 Avril 2026 - 12 Juin 2026 26h
+      </td>
+    </tr>
+
+    <tr>
+      <td>Technologies utilisées</td>
+      <td>
+        Linux Debian · Machine virtuelle · Python · Django · HTML · CSS · Base de données MySQL/MariaDB ·
+        Nginx · Gunicorn · GitHub · OpenPyXL · Pillow · ReportLab · PyMySQL · Diagramme de Gantt
+      </td>
+    </tr>
+
+    <tr>
+      <td>Compétences développées<br><small>lien avec le référentiel</small></td>
+      <td>
+        <ul>
+          <li>
+            <strong>AC13.01</strong> — Utiliser un système informatique et ses outils :
+            utilisation d’une machine virtuelle Linux, de GitHub, de Django et des outils de déploiement.
+          </li>
+          <li>
+            <strong>AC13.02</strong> — Lire, exécuter, corriger et modifier un programme :
+            modification du code de l’application pour gérer les pages, les formulaires, les modèles
+            et les différentes fonctionnalités du gestionnaire de notes.
+          </li>
+          <li>
+            <strong>AC13.03</strong> — Traduire un algorithme dans un langage et pour un environnement donné :
+            mise en place des traitements nécessaires pour gérer les données, importer des fichiers
+            et générer des relevés de notes.
+          </li>
+          <li>
+            <strong>AC13.04</strong> — Connaître l’architecture et les technologies d’un site Web :
+            création d’une application web structurée avec Django, des vues, des templates HTML
+            et une base de données.
+          </li>
+          <li>
+            <strong>AC13.05</strong> — Choisir les mécanismes de gestion de données adaptés :
+            conception et utilisation d’une base de données pour stocker les étudiants, UE, ressources,
+            enseignants, examens et notes.
+          </li>
+          <li>
+            <strong>AC13.06</strong> — S’intégrer dans un environnement propice au développement
+            et au travail collaboratif :
+            travail en groupe de 3, répartition des tâches, utilisation de GitHub, rédaction de livrables
+            et préparation d’une démonstration commune.
+          </li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Plan d’action<br><small>étapes clés</small></td>
+      <td>
+        <ol>
+          <li>Analyser le sujet et identifier les fonctionnalités attendues pour le gestionnaire de notes.</li>
+          <li>Répartir les tâches entre les 3 membres du groupe et réaliser un diagramme de Gantt.</li>
+          <li>Mettre en place une machine virtuelle Linux Debian pour héberger le projet.</li>
+          <li>Installer les composants nécessaires : Python, Django, Git, Nginx, Gunicorn et MySQL/MariaDB.</li>
+          <li>Concevoir la base de données avec les étudiants, UE, ressources, enseignants, examens et notes.</li>
+          <li>Développer les pages web et les fonctionnalités CRUD pour chaque type de donnée.</li>
+          <li>Ajouter la saisie des notes manuellement et par import de fichier.</li>
+          <li>Développer la génération d’un relevé de notes simple pour un étudiant.</li>
+          <li>Rédiger la documentation d’installation et de déploiement de l’application.</li>
+          <li>Préparer la présentation finale, la démonstration et déposer le projet complet sur GitHub.</li>
+        </ol>
+      </td>
+    </tr>
+  </table>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       BLOC 2 — SYNTHÈSE PORTFOLIO
+       ══════════════════════════════════════ -->
+  <div class="bloc">
+    <div class="bloc-titre">
+      <div class="bloc-num">2</div>
+      <h2>Synthèse du projet pour le portfolio</h2>
+    </div>
+
+    <!-- Contexte et objectif -->
+    <div class="synthese-grille">
+      <div class="synthese-bloc">
+        <h4>Contexte &amp; objectif</h4>
+        <p>
+          Cette SAE avait pour objectif de concevoir et déployer une application web permettant
+          de consulter, insérer et manipuler des données à partir d’une base de données. Notre sujet
+          était la création d’un gestionnaire de notes pour des étudiants. Le site devait permettre
+          de gérer les étudiants, les enseignants, les UE, les ressources, les examens et les notes
+          grâce à des fonctionnalités CRUD. Le projet a été réalisé en groupe de 3 étudiants :
+          Quentin Altinok, Alexandre Kientz et Illia Sitovskyi.
+        </p>
+      </div>
+
+      <div class="synthese-bloc">
+        <h4>Technologies utilisées</h4>
+
+        <div class="tech-grille">
+
+          <div class="tech-carte">
+            <img class="tech-logo-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Logo Python">
+            <span class="tech-nom">Python</span>
+          </div>
+
+          <div class="tech-carte">
+            <img class="tech-logo-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" alt="Logo Django">
+            <span class="tech-nom">Django</span>
+          </div>
+
+          <div class="tech-carte">
+            <img class="tech-logo-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="Logo HTML5">
+            <span class="tech-nom">HTML5</span>
+          </div>
+
+          <div class="tech-carte">
+            <img class="tech-logo-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="Logo CSS3">
+            <span class="tech-nom">CSS3</span>
+          </div>
+
+          <div class="tech-carte">
+            <img class="tech-logo-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="Logo MySQL">
+            <span class="tech-nom">MySQL / MariaDB</span>
+          </div>
+
+          <div class="tech-carte">
+            <img class="tech-logo-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Logo Git">
+            <span class="tech-nom">GitHub</span>
+          </div>
+
+          <div class="tech-carte">
+            <img class="tech-logo-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/debian/debian-original.svg" alt="Logo Debian">
+            <span class="tech-nom">Linux Debian</span>
+          </div>
+
+          <div class="tech-carte">
+            <img class="tech-logo-svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" alt="Logo Nginx">
+            <span class="tech-nom">Nginx</span>
+          </div>
+
+          <div class="tech-carte">
+            <div class="tech-icone">PDF</div>
+            <span class="tech-nom">ReportLab</span>
+          </div>
+
+          <div class="tech-carte">
+            <div class="tech-icone">XLSX</div>
+            <span class="tech-nom">OpenPyXL</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="synthese-bloc">
+        <h4>Compétences mobilisées</h4>
+        <ul>
+          <li>
+            <strong>AC0312</strong> — Lire, exécuter, corriger et modifier un programme :
+            modification du code Django pour créer les pages, les formulaires et les traitements.
+          </li>
+          <li>
+            <strong>AC0314</strong> — Connaître l’architecture et les technologies d’un site Web :
+            utilisation de Django, des vues, des templates HTML/CSS et du routage de l’application.
+          </li>
+          <li>
+            <strong>AC0315</strong> — Choisir les mécanismes de gestion de données adaptés :
+            conception d’une base de données pour stocker les étudiants, UE, ressources, enseignants,
+            examens et notes.
+          </li>
+          <li>
+            <strong>AC0316</strong> — S’intégrer dans un environnement propice au développement
+            et au travail collaboratif :
+            travail en groupe de 3, répartition des tâches avec un diagramme de Gantt et utilisation
+            d’un dépôt GitHub commun.
+          </li>
+        </ul>
+      </div>
+
+      <div class="synthese-bloc">
+        <h4>Déroulement &amp; méthodologie</h4>
+        <p>
+          Nous avons commencé par analyser le sujet et définir les données à gérer dans l’application :
+          étudiants, UE, ressources, enseignants, examens et notes. Ensuite, nous avons organisé le travail
+          avec un diagramme de Gantt afin de répartir les tâches entre les membres du groupe. Nous avons
+          mis en place le projet Django, conçu le schéma de base de données, puis développé les différentes
+          fonctionnalités CRUD. Enfin, nous avons ajouté les fonctions importantes du projet : connexion
+          enseignant, ajout manuel des notes, import par fichier Excel, consultation des notes et génération
+          d’un relevé de notes en PDF.
+        </p>
+      </div>
+    </div>
+
+    <!-- Galerie d'illustrations -->
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--texte);margin:1.5rem 0 1rem;">
+      Illustrations
+    </h3>
+
+    <div class="galerie">
+      <div class="galerie-item">
+        <div class="galerie-img">
+          <img src="../images/sae203_interface_enseignant.png" alt="Interface enseignant du gestionnaire de notes">
+        </div>
+        <p class="galerie-legende">
+          Cette capture présente l’interface enseignant de l’application. Elle regroupe les actions rapides
+          permettant d’ajouter un étudiant, d’importer des étudiants, de saisir une note, d’importer des notes,
+          de créer un examen, d’ajouter une UE, une ressource ou un enseignant.
+        </p>
+      </div>
+
+      <div class="galerie-item">
+        <div class="galerie-img">
+          <img src="../images/sae203_ajout_note.png" alt="Formulaire d'ajout d'une note">
+        </div>
+        <p class="galerie-legende">
+          Cette illustration montre le formulaire d’ajout d’une note. L’enseignant peut sélectionner un examen,
+          choisir un étudiant et saisir une note. Cette fonctionnalité fait partie du CRUD et permet une gestion
+          manuelle des résultats.
+        </p>
+      </div>
+
+      <div class="galerie-item">
+        <div class="galerie-img">
+          <img src="../images/sae203_connexion_enseignant.png" alt="Page de connexion enseignant">
+        </div>
+        <p class="galerie-legende">
+          Cette capture montre la page de connexion réservée aux enseignants. Elle permet de sécuriser l’accès
+          aux fonctionnalités d’administration, comme la création d’examens, l’ajout de notes ou l’import
+          de fichiers.
+        </p>
+      </div>
+
+      <div class="galerie-item">
+        <div class="galerie-img">
+          <img src="../images/sae203_interface.png" alt="Relevé de notes étudiant">
+        </div>
+        <p class="galerie-legende">
+          Cette capture présente le relevé de notes d’un étudiant. Les résultats sont affichés par UE et par
+          ressource, avec les examens, les coefficients et les notes obtenues. Un bouton permet aussi
+          d’exporter le relevé au format PDF.
+        </p>
+      </div>
+
+      <div class="galerie-item">
+        <div class="galerie-img">
+          <img src="../images/sae203_schema-db.png" alt="Schéma de la base de données du gestionnaire de notes">
+        </div>
+        <p class="galerie-legende">
+          Cette illustration montre le schéma de la base de données. On y retrouve les principales tables :
+          étudiants, enseignants, UE, ressources, examens et notes. Les relations entre les tables permettent
+          d’associer chaque note à un étudiant et à un examen.
+        </p>
+      </div>
+
+      <div class="galerie-item">
+        <div class="galerie-img">
+          <img src="../images/sae203_gantt.png" alt="Diagramme de Gantt du projet SAE 2.03">
+        </div>
+        <p class="galerie-legende">
+          Cette capture présente le diagramme de Gantt du projet. Il montre la planification des tâches,
+          leur répartition entre les membres du groupe et l’avancement des différentes étapes :
+          base de données, CRUD, HTML/CSS, fonctionnalités, documentation et tests.
+        </p>
+      </div>
+    </div>
+
+    <!-- Retour d'expérience -->
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--texte);margin:1.5rem 0 1rem;">
+      Retour d'expérience
+    </h3>
+
+    <div class="synthese-grille">
+      <div class="synthese-bloc">
+        <h4>Ce que j'ai appris</h4>
+        <p>
+          Cette SAE m’a permis de progresser en développement web et en gestion de base de données.
+          J’ai appris à utiliser Django pour créer une application structurée, à manipuler des données
+          liées aux étudiants, aux UE, aux examens et aux notes, ainsi qu’à mettre en place un CRUD complet.
+          J’ai aussi découvert l’importance de l’authentification, de l’organisation des templates et de la
+          séparation entre les modèles, les vues, les formulaires et les routes. Le travail en groupe de 3
+          m’a également permis de mieux comprendre l’importance de la répartition des tâches, de la
+          communication et de l’utilisation d’un dépôt GitHub commun.
+        </p>
+      </div>
+
+      <div class="synthese-bloc">
+        <h4>Ce que je ferais différemment</h4>
+        <p>
+          Avec du recul, je préparerais plus précisément la structure de la base de données avant de commencer
+          le développement afin d’éviter certaines modifications en cours de projet. J’organiserais aussi les
+          tâches plus tôt dans le groupe, avec des objectifs plus précis pour chaque séance. Enfin, je mettrais
+          en place des tests plus réguliers après chaque fonctionnalité pour vérifier rapidement les formulaires,
+          les imports de fichiers et l’affichage des relevés de notes.
+        </p>
+      </div>
+    </div>
+  </div>
+  </div>
+    <!-- Liens / ressources -->
+    <div class="synthese-bloc" style="margin-top:1rem;">
+      <h4>Liens &amp; ressources</h4>
+      <p>
+        <!-- Remplace par tes vrais liens -->
+        <a href="https://github.com/AlexKientz67/SAE-Gestion-De-Notes">Dépôt GitHub →</a> &nbsp;·&nbsp;
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Navigation entre projets -->
+  <div class="nav-projets">
+    <a href="../index.html#projets" class="btn btn--secondaire">← Tous les projets</a>
+  </div>
+
+</div><!-- fin .projet-corps -->
+
+<footer class="footer">
+  <p><strong>Quentin ALTINOK</strong> · BUT Réseaux &amp; Télécommunications · IUT de Colmar · &copy; 2025–2026</p>
+</footer>
+
+<a href="#" class="retour-haut" aria-label="Retour en haut">↑</a>
+
+</body>
+</html>

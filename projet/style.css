@@ -1,0 +1,1454 @@
+/* ============================================================
+   E-PORTFOLIO — Quentin ALTINOK — BUT R&T
+   Style : professionnel, académique, bleu/blanc
+   Typo  : DM Serif Display (titres) + Inter (corps)
+   ============================================================ */
+
+/* ── Imports Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ============================================================
+   TOKENS & VARIABLES
+   ============================================================ */
+:root {
+  --bleu:         #1A56DB;   /* bleu principal */
+  --bleu-clair:   #EFF6FF;   /* fond léger bleu */
+  --bleu-sombre:  #1E40AF;   /* hover */
+  --blanc:        #FFFFFF;
+  --gris-fond:    #F8FAFC;   /* sections alternées */
+  --gris-bordure: #E2E8F0;
+  --gris-texte:   #64748B;
+  --texte:        #1E293B;
+  --nav-h:        68px;
+  --rayon:        8px;
+  --max-w:        1100px;
+  --shadow:       0 1px 4px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.05);
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--blanc);
+  color: var(--texte);
+  line-height: 1.7;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--bleu);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  padding-left: 1.4rem;
+}
+
+/* ============================================================
+   NAVIGATION FIXE
+   ============================================================ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-h);
+  background: var(--blanc);
+  border-bottom: 1px solid var(--gris-bordure);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+
+.nav-interieur {
+  max-width: var(--max-w);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Logo / nom dans la nav */
+.nav-logo {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.15rem;
+  color: var(--texte);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.nav-logo:hover {
+  text-decoration: none;
+  color: var(--bleu);
+}
+
+/* Liens de navigation */
+.nav-liens {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 0.15rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-liens a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--gris-texte);
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-liens a:hover {
+  background: var(--bleu-clair);
+  color: var(--bleu);
+  text-decoration: none;
+}
+
+/* Sélecteur de langue */
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  border-left: 1px solid var(--gris-bordure);
+  padding-left: 1rem;
+  margin-left: 0.5rem;
+  flex-shrink: 0;
+}
+
+.lang a {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gris-texte);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.lang a:hover,
+.lang a.actif {
+  color: var(--bleu);
+  background: var(--bleu-clair);
+}
+
+.lang-sep {
+  color: var(--gris-bordure);
+  font-size: 0.8rem;
+}
+
+/* ============================================================
+   CONTENEUR CENTRAL
+   ============================================================ */
+.conteneur {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ============================================================
+   SECTIONS GÉNÉRALES
+   ============================================================ */
+.section {
+  padding: 5rem 0;
+}
+
+/* Sections alternées en gris très léger */
+.section--gris {
+  background: var(--gris-fond);
+}
+
+/* Étiquette de section (ex : "À propos") */
+.section-etiquette {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bleu);
+  background: var(--bleu-clair);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+}
+
+/* Titre principal de section */
+.section-titre {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.7rem, 3.5vw, 2.2rem);
+  color: var(--texte);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+/* Sous-titre / description courte */
+.section-desc {
+  color: var(--gris-texte);
+  font-size: 1rem;
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+/* Ligne de séparation décorative */
+.ligne-bleu {
+  width: 48px;
+  height: 3px;
+  background: var(--bleu);
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+
+/* ============================================================
+   HERO — SECTION ACCUEIL
+   ============================================================ */
+#accueil {
+  min-height: 100vh;
+  padding-top: calc(var(--nav-h) + 4rem);
+  padding-bottom: 4rem;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+    url("https://i.postimg.cc/wBBKjT5S/Chat-GPT-Image-14-juin-2026-10-53-55.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid var(--gris-bordure);
+}
+
+.hero-grille {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: center;
+}
+
+/*.hero-contenu {}*/
+
+.hero-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bleu);
+  margin-bottom: 1rem;
+}
+
+.hero-nom {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.08;
+  color: var(--texte);
+  margin-bottom: 0.5rem;
+}
+
+.hero-titre {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--gris-texte);
+  margin-bottom: 1.5rem;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: var(--gris-texte);
+  max-width: 540px;
+  margin-bottom: 2rem;
+  line-height: 1.75;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  color: var(--gris-texte);
+}
+
+.hero-meta-item svg {
+  width: 16px;
+  height: 16px;
+  color: var(--bleu);
+  flex-shrink: 0;
+}
+
+/* Boutons CTA */
+.cta-groupe {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: var(--rayon);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+}
+
+.btn--primaire {
+  background: var(--bleu);
+  color: var(--blanc);
+}
+
+.btn--primaire:hover {
+  background: var(--bleu-sombre);
+  text-decoration: none;
+  color: var(--blanc);
+  box-shadow: 0 4px 12px rgba(26,86,219,0.25);
+}
+
+.btn--secondaire {
+  background: var(--blanc);
+  color: var(--bleu);
+  border: 1.5px solid var(--gris-bordure);
+}
+
+.btn--secondaire:hover {
+  border-color: var(--bleu);
+  background: var(--bleu-clair);
+  text-decoration: none;
+}
+
+/* Photo héro */
+.hero-photo-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--bleu);
+  box-shadow: var(--shadow);
+}
+
+.hero-photo-legende {
+  font-size: 0.78rem;
+  color: var(--gris-texte);
+  text-align: center;
+}
+
+/* ============================================================
+   À PROPOS
+   ============================================================ */
+.apropos-grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.apropos-carte {
+  background: var(--blanc);
+  border: 1px solid var(--gris-bordure);
+  border-radius: var(--rayon);
+  padding: 1.5rem;
+  border-top: 3px solid var(--bleu);
+}
+
+.apropos-carte h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.1rem;
+  color: var(--texte);
+  margin-bottom: 0.75rem;
+}
+
+.apropos-carte p,
+.apropos-carte ul {
+  font-size: 0.9rem;
+  color: var(--gris-texte);
+  line-height: 1.7;
+}
+
+/* Langues */
+.langues-liste {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.langue-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.langue-drapeau {
+  font-size: 1.2rem;
+}
+
+.langue-info {
+  flex: 1;
+}
+
+.langue-nom {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--texte);
+  display: flex;
+  justify-content: space-between;
+}
+
+.langue-niveau {
+  font-size: 0.78rem;
+  color: var(--gris-texte);
+}
+
+.barre-langue {
+  height: 5px;
+  background: var(--gris-bordure);
+  border-radius: 3px;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.barre-langue-rempli {
+  height: 100%;
+  background: var(--bleu);
+  border-radius: 3px;
+}
+
+/* ============================================================
+   COMPÉTENCES
+   ============================================================ */
+.competences-grille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.competence-carte {
+  background: var(--blanc);
+  border: 1px solid var(--gris-bordure);
+  border-radius: var(--rayon);
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+/* Bande latérale bleue — la signature visuelle du design */
+.competence-carte::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--bleu);
+}
+
+.competence-icone {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.competence-code {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bleu);
+  background: var(--bleu-clair);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.competence-carte h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.3rem;
+  color: var(--texte);
+  margin-bottom: 0.6rem;
+}
+
+.competence-carte p {
+  font-size: 0.88rem;
+  color: var(--gris-texte);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Liens SAE dans les cartes compétences */
+.competence-saes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+.sae-lien {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--bleu);
+  background: var(--bleu-clair);
+  padding: 3px 9px;
+  border-radius: 4px;
+  border: 1px solid #BFDBFE;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.sae-lien:hover {
+  background: #DBEAFE;
+  text-decoration: none;
+}
+
+/* ============================================================
+   CARTES PROJETS SAE
+   ============================================================ */
+.projets-grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.projet-carte {
+  background: var(--blanc);
+  border: 1px solid var(--gris-bordure);
+  border-radius: var(--rayon);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.projet-carte:hover {
+  box-shadow: 0 4px 20px rgba(26,86,219,0.12);
+  transform: translateY(-2px);
+}
+
+/* Zone image de la carte */
+.projet-carte-image {
+  height: 160px;
+  background: var(--bleu-clair);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.projet-carte-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Placeholder si pas d'image */
+.projet-carte-image-placeholder {
+  font-size: 2.5rem;
+  color: var(--bleu);
+  opacity: 0.4;
+}
+
+/* Badge compétence sur l'image */
+.projet-carte-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blanc);
+  background: var(--bleu);
+  padding: 3px 9px;
+  border-radius: 4px;
+}
+
+.projet-carte-corps {
+  padding: 1.25rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.projet-carte-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--bleu);
+  letter-spacing: 0.05em;
+}
+
+.projet-carte h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.05rem;
+  color: var(--texte);
+  line-height: 1.35;
+}
+
+.projet-carte p {
+  font-size: 0.85rem;
+  color: var(--gris-texte);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.projet-carte .btn {
+  align-self: flex-start;
+  margin-top: 0.75rem;
+  font-size: 0.82rem;
+  padding: 0.5rem 1.1rem;
+}
+
+/* Séparateur de semestre */
+.semestre-titre {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gris-texte);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.semestre-titre:first-child {
+  margin-top: 0;
+}
+
+.semestre-titre::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--gris-bordure);
+}
+
+/* ============================================================
+   PROJET INTÉGRATIF S2 — bannière
+   ============================================================ */
+.integratif-bloc {
+  background: var(--bleu);
+  color: var(--blanc);
+  border-radius: var(--rayon);
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+.integratif-etiquette {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: 0.75rem;
+}
+
+.integratif-bloc h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.9rem;
+  color: var(--blanc);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.integratif-bloc p {
+  font-size: 0.93rem;
+  opacity: 0.85;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  max-width: 560px;
+}
+
+.integratif-comps {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.integratif-comp-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(255,255,255,0.2);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.integratif-bloc .btn--blanc {
+  background: var(--blanc);
+  color: var(--bleu);
+  font-weight: 700;
+}
+
+.integratif-bloc .btn--blanc:hover {
+  background: #EFF6FF;
+  text-decoration: none;
+  color: var(--bleu-sombre);
+}
+
+/* ============================================================
+   BILAN RÉFLEXIF
+   ============================================================ */
+.bilan-grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.bilan-carte {
+  background: var(--blanc);
+  border: 1px solid var(--gris-bordure);
+  border-radius: var(--rayon);
+  padding: 1.75rem;
+  border-top: 3px solid var(--bleu);
+}
+
+.bilan-carte--large {
+  grid-column: 1 / -1;
+}
+
+.bilan-carte-icone {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.bilan-carte h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.1rem;
+  color: var(--texte);
+  margin-bottom: 0.85rem;
+}
+
+.bilan-carte ul,
+.bilan-carte p {
+  font-size: 0.9rem;
+  color: var(--gris-texte);
+  line-height: 1.75;
+}
+
+.bilan-carte ul {
+  padding-left: 1.2rem;
+}
+
+.bilan-carte ul li {
+  margin-bottom: 0.35rem;
+}
+
+/* Timeline objectifs futurs */
+.timeline {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  background: var(--gris-bordure);
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.timeline-point {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--bleu);
+  border: 3px solid var(--blanc);
+  box-shadow: 0 0 0 2px var(--bleu);
+  flex-shrink: 0;
+  margin-top: 2px;
+  z-index: 1;
+}
+
+/*.timeline-contenu {}*/
+
+.timeline-annee {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--bleu);
+  margin-bottom: 0.1rem;
+}
+
+.timeline-texte {
+  font-size: 0.88rem;
+  color: var(--gris-texte);
+}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-grille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.contact-carte {
+  background: var(--blanc);
+  border: 1px solid var(--gris-bordure);
+  border-radius: var(--rayon);
+  padding: 1.75rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s, transform 0.2s;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.contact-carte:hover {
+  box-shadow: 0 4px 20px rgba(26,86,219,0.12);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.contact-icone {
+  width: 52px;
+  height: 52px;
+  background: var(--bleu-clair);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--bleu);
+  font-weight: 700;
+}
+
+.contact-carte h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--texte);
+}
+
+.contact-carte span {
+  font-size: 0.82rem;
+  color: var(--gris-texte);
+}
+
+.contact-info-bas {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--gris-fond);
+  border: 1px solid var(--gris-bordure);
+  border-radius: var(--rayon);
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--gris-texte);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  background: var(--texte);
+  color: rgba(255,255,255,0.65);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.82rem;
+}
+
+.footer strong {
+  color: var(--blanc);
+}
+
+/* ============================================================
+   BOUTON RETOUR EN HAUT (CSS pur, no JS)
+   ============================================================ */
+.retour-haut {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  background: var(--bleu);
+  color: var(--blanc);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(26,86,219,0.35);
+  z-index: 90;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.retour-haut:hover {
+  background: var(--bleu-sombre);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: var(--blanc);
+}
+
+/* ============================================================
+   PAGES PROJET SAE — STRUCTURE COMMUNE
+   ============================================================ */
+
+/* En-tête de page projet */
+.projet-entete {
+  padding-top: var(--nav-h);
+  background: var(--gris-fond);
+  border-bottom: 1px solid var(--gris-bordure);
+  padding-bottom: 3rem;
+  padding-top: calc(var(--nav-h) + 2.5rem);
+}
+
+.projet-entete-interieur {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.projet-fil-ariane {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--gris-texte);
+  margin-bottom: 1.5rem;
+}
+
+.projet-fil-ariane a {
+  color: var(--bleu);
+  text-decoration: none;
+}
+
+.projet-fil-ariane a:hover {
+  text-decoration: underline;
+}
+
+.projet-fil-sep { color: var(--gris-bordure); }
+
+.projet-entete-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.projet-badge-comp {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blanc);
+  background: var(--bleu);
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+.projet-badge-sem {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bleu);
+  background: var(--bleu-clair);
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+.projet-entete h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--texte);
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.projet-entete-desc {
+  font-size: 1rem;
+  color: var(--gris-texte);
+  max-width: 680px;
+  line-height: 1.7;
+}
+
+/* Corps de page projet */
+.projet-corps {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+/* Blocs de contenu dans la page projet */
+.bloc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.bloc-titre {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--gris-bordure);
+}
+
+.bloc-num {
+  width: 32px;
+  height: 32px;
+  background: var(--bleu);
+  color: var(--blanc);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.bloc-titre h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.35rem;
+  color: var(--texte);
+}
+
+/* Tableau de la fiche de suivi */
+.fiche-tableau {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.fiche-tableau tr {
+  border-bottom: 1px solid var(--gris-bordure);
+}
+
+.fiche-tableau td:first-child {
+  width: 200px;
+  font-weight: 600;
+  color: var(--texte);
+  padding: 0.9rem 1rem 0.9rem 0;
+  vertical-align: top;
+}
+
+.fiche-tableau td:last-child {
+  color: var(--gris-texte);
+  padding: 0.9rem 0;
+}
+
+/* Journal de bord — entrées */
+.journal-entree {
+  background: var(--blanc);
+  border: 1px solid var(--gris-bordure);
+  border-radius: var(--rayon);
+  overflow: hidden;
+}
+
+.journal-entete {
+  background: var(--gris-fond);
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid var(--gris-bordure);
+}
+
+.journal-date {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--bleu);
+}
+
+.journal-seance {
+  font-size: 0.78rem;
+  color: var(--gris-texte);
+}
+
+.journal-corps {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.journal-rubrique h4 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gris-texte);
+  margin-bottom: 0.4rem;
+}
+
+.journal-rubrique p,
+.journal-rubrique ul {
+  font-size: 0.88rem;
+  color: var(--texte);
+  line-height: 1.65;
+}
+
+/* Galerie de preuves */
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.galerie-item {
+  background: var(--blanc);
+  border: 1px solid var(--gris-bordure);
+  border-radius: var(--rayon);
+  overflow: hidden;
+}
+
+.galerie-img {
+  width: 100%;
+  height: 170px;
+  background: var(--bleu-clair);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.galerie-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.galerie-img-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--bleu);
+  opacity: 0.45;
+}
+
+.galerie-img-placeholder span {
+  font-size: 2rem;
+}
+
+.galerie-img-placeholder p {
+  font-size: 0.72rem;
+  text-align: center;
+  max-width: 140px;
+}
+
+.galerie-legende {
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  color: var(--gris-texte);
+  border-top: 1px solid var(--gris-bordure);
+  font-style: italic;
+}
+
+/* Synthèse — grilles */
+.synthese-grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.synthese-bloc {
+  background: var(--gris-fond);
+  border: 1px solid var(--gris-bordure);
+  border-radius: var(--rayon);
+  padding: 1.25rem;
+}
+
+.synthese-bloc h4 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bleu);
+  margin-bottom: 0.75rem;
+}
+
+.synthese-bloc p,
+.synthese-bloc ul {
+  font-size: 0.88rem;
+  color: var(--gris-texte);
+  line-height: 1.65;
+}
+
+/* Champs à remplir — placeholder visuel */
+.a-completer {
+  background: #FFFBEB;
+  border: 1.5px dashed #FCD34D;
+  border-radius: var(--rayon);
+  padding: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: #92400E;
+}
+
+.a-completer-icone {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* Navigation entre projets */
+.nav-projets {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--gris-bordure);
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.nav-projets a {
+  font-size: 0.88rem;
+}
+
+/* ============================================================
+   TECHNOLOGIES UTILISÉES — CARTES AVEC LOGOS
+   ============================================================ */
+
+.tech-grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.tech-carte {
+  background: var(--blanc);
+  border: 1px solid var(--gris-bordure);
+  border-radius: var(--rayon);
+  min-height: 95px;
+  padding: 0.85rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  text-align: center;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+
+.tech-carte:hover {
+  transform: translateY(-2px);
+  border-color: #BFDBFE;
+  box-shadow: 0 4px 14px rgba(26, 86, 219, 0.12);
+}
+
+.tech-logo,
+.tech-logo-svg {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
+}
+
+.tech-logo-svg {
+  fill: var(--bleu);
+}
+
+.tech-icone {
+  min-width: 38px;
+  height: 34px;
+  padding: 0 0.45rem;
+  border-radius: 8px;
+  background: var(--bleu-clair);
+  color: var(--bleu);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.tech-nom {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--texte);
+  line-height: 1.3;
+}
+/* Taille des logos dans les cartes technologies */
+.tech-carte img,
+.tech-carte svg,
+.tech-logo,
+.tech-logo-svg {
+  width: 38px !important;
+  height: 38px !important;
+  max-width: 38px !important;
+  max-height: 38px !important;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Couleur des SVG simples */
+.tech-carte svg,
+.tech-logo-svg {
+  fill: var(--bleu);
+}
+
+/* Taille des cartes */
+.tech-carte {
+  min-height: 95px;
+  padding: 0.85rem 0.5rem;
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* Tablette */
+@media (max-width: 900px) {
+  .hero-grille {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo-zone {
+    display: none; /* On cache la photo sur tablette pour garder la lisibilité */
+  }
+
+  .competences-grille {
+    grid-template-columns: 1fr;
+  }
+
+  .apropos-grille {
+    grid-template-columns: 1fr;
+  }
+
+  .bilan-grille {
+    grid-template-columns: 1fr;
+  }
+
+  .bilan-carte--large {
+    grid-column: auto;
+  }
+
+  .integratif-bloc {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grille {
+    grid-template-columns: 1fr;
+  }
+
+  .synthese-grille {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .nav-liens {
+    display: none; /* Navigation simplifiée sur mobile — à améliorer si besoin */
+  }
+
+  .nav-interieur {
+    padding: 0 1rem;
+  }
+
+  .conteneur {
+    padding: 0 1rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .hero-nom {
+    font-size: 2.2rem;
+  }
+
+  .projets-grille {
+    grid-template-columns: 1fr;
+  }
+
+  .integratif-bloc {
+    padding: 2rem 1.5rem;
+  }
+
+  .retour-haut {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .projet-corps {
+    padding: 2rem 1rem 3rem;
+  }
+}
+
+
+
+
+/* ============================================================
+   UTILITAIRES
+   ============================================================ */
+.texte-bleu  { color: var(--bleu); }
+.texte-gris  { color: var(--gris-texte); }
+.gras        { font-weight: 600; }
+.mb-1        { margin-bottom: 0.5rem; }
+.mb-2        { margin-bottom: 1rem; }
+.mt-2        { margin-top: 1rem; }
